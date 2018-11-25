@@ -17,7 +17,9 @@
 - [Mongodb](https://www.mongodb.org)
 
 
-## Python3 설치
+## Python3 설치  
+[http://snowdeer.github.io/python/2018/02/20/install-python3-on-centos/]
+
 Repository를 yum에 추가
 <pre><code>
 $sudo yum install -y https://centos7.iuscommunity.org/ius-release.rpm

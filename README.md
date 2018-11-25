@@ -25,26 +25,36 @@ $sudo yum install -y https://centos7.iuscommunity.org/ius-release.rpm
 
 yum search로 python 3.x 버전 확인
 아래 명령어를 수행하면 python3으로 시작하는 라이브러리들을 확인할 수 있습니다.
-'''$ yum search python3
+<pre><code>
+$ yum search python3
+</code></pre>
 
 필요 라이브러리들 설치
-''' $ sudo yum install -y python36u python36u-libs python36u-devel python36u-pip
+<pre><code>
+$ sudo yum install -y python36u python36u-libs python36u-devel python36u-pip
+</code></pre>
 
 Python 설치 및 버전 확인
-''' $ python -V
+<pre><code>
+$ python -V
 Python 2.7.5
 
 $ python3.6 -V
 Python 3.6.4
+</code></pre>
 
 기본적으로 python 명령어는 Python 2.x를 가리키고 있기 때문에 Alias 수정으로 이를 변경해줍니다.
 
 Alias 수정
 먼저 Python 3.x가 설치되어 있는 디렉토리 위치를 찾습니다.
-'''  $ which python3.6 /usr/bin/python3.6 
+<pre><code>
+$ which python3.6 /usr/bin/python3.6 
+</code></pre>
 
 그 다음 현재 Alias 확인을 합니다.
-''' $ ls -l /bin/python*
+<pre><code>
+$ ls -l /bin/python*
+</code></pre>
 
 Alias 수정을 합니다.
 

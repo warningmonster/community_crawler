@@ -57,7 +57,12 @@ $ ls -l /bin/python*
 </code></pre>
 
 Alias 수정을 합니다.
-
+<pre><code>
+$ sudo unlink /bin/python
+$ sudo ln -s /bin/python3.6 /bin/python3
+$ sudo ln -s /bin/python3.6 /bin/python
+$ sudo ln -s /bin/pip3.6 /bin/pip
+</code></pre>
 
 ## 설치
 - ln -s $(pwd)/pre-commit $(pwd)/.git/hooks/

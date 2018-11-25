@@ -21,67 +21,65 @@
 (http://snowdeer.github.io/python/2018/02/20/install-python3-on-centos/)    
 
 Repository를 yum에 추가   
-<code>
+~~~
 $sudo yum install -y https://centos7.iuscommunity.org/ius-release.rpm
-</code>
+~~~
 
 yum search로 python 3.x 버전 확인
 아래 명령어를 수행하면 python3으로 시작하는 라이브러리들을 확인할 수 있습니다.   
-<code>
+~~~
 $ yum search python3
-</code>
+~~~
 
 필요 라이브러리들 설치   
-<code>
+~~~
 $ sudo yum install -y python36u python36u-libs python36u-devel python36u-pip
-</code>
+~~~
 
 Python 설치 및 버전 확인   
-<pre><code>
+~~~
 $ python -V
 Python 2.7.5
 
 $ python3.6 -V
 Python 3.6.4
-</code></pre>
+~~~
 
 기본적으로 python 명령어는 Python 2.x를 가리키고 있기 때문에 Alias 수정으로 이를 변경해줍니다.
 
 Alias 수정
 먼저 Python 3.x가 설치되어 있는 디렉토리 위치를 찾습니다.   
-<code>
+~~~
 $ which python3.6 /usr/bin/python3.6 
-</code>
+~~~
 
 그 다음 현재 Alias 확인을 합니다.   
-<code>
+~~~
 $ ls -l /bin/python*
-</code>
+~~~
 
 Alias 수정을 합니다.   
-<pre><code>
+~~~
 $ sudo unlink /bin/python
 $ sudo ln -s /bin/python3.6 /bin/python3
 $ sudo ln -s /bin/python3.6 /bin/python
 $ sudo ln -s /bin/pip3.6 /bin/pip
-</code></pre>
+~~~
 
 ## 설치
-<pre><code>
+~~~
 - ln -s $(pwd)/pre-commit $(pwd)/.git/hooks/
 - cp env.dist.dev .env
 - python3 -m venv venv
 - source venv/bin/activate .
 - pip install -r requirement.txt
-</code></pre>
+~~~
 
 ## 실행명령어
-<pre>
-<code>
+~~~
 [aaa@bbb community_crawler]$ python serve.py
 2018-11-25 05:14:09,403 - crawler.main - INFO - crawler start
-</code>
-</pre>
+~~~
 
 
 ## License

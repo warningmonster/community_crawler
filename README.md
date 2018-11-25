@@ -71,7 +71,7 @@ $ sudo ln -s /bin/pip3.6 /bin/pip
 - ln -s $(pwd)/pre-commit $(pwd)/.git/hooks/
 - cp env.dist.dev .env
 - python3 -m venv venv
-- source venv/bin/activate .
+- source venv/bin/activate . <---- 모듈 실행할때마다 다시 해줘야 함.(2018.11.25 메모) 
 - pip install -r requirement.txt
 ~~~
 

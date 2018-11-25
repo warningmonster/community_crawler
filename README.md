@@ -76,7 +76,7 @@ $ sudo ln -s /bin/pip3.6 /bin/pip
 ## 실행명령어
 <pre>
 <code>
-  [aaa@bbb community_crawler]$ python serve.py
+[aaa@bbb community_crawler]$ python serve.py
 2018-11-25 05:14:09,403 - crawler.main - INFO - crawler start
 </code>
 </pre>

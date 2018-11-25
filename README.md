@@ -19,7 +19,9 @@
 
 ## Python3 설치
 Repository를 yum에 추가
-''' $sudo yum install -y https://centos7.iuscommunity.org/ius-release.rpm '''
+<pre><code>
+$sudo yum install -y https://centos7.iuscommunity.org/ius-release.rpm
+</code></pre>
 
 yum search로 python 3.x 버전 확인
 아래 명령어를 수행하면 python3으로 시작하는 라이브러리들을 확인할 수 있습니다.

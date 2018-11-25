@@ -73,6 +73,12 @@ $ sudo ln -s /bin/pip3.6 /bin/pip
 - source venv/bin/activate .
 - pip install -r requirement.txt
 
+## 실행명령어
+<code>
+  [aaa@bbb community_crawler]$ python serve.py
+2018-11-25 05:14:09,403 - crawler.main - INFO - crawler start
+</code>
+
 
 ## License
 MIT (http://www.opensource.org/licenses/mit-license.php)

@@ -113,6 +113,14 @@ ex) git clone https://github.com/warningmonster/community_crawler.git
 
 ## 원격의 mongodb 접속하기
 ~~~
-[mmmm@seoul chat-bot]$ cat test.sh
+# 먼저 /etc/hosts 파일에 mongodb라고 등록해놓았다.  
+# public network이 아니라 private network 주소이다.
+# 이건 구글클라우드를 사용해서 있는 거고, 일반적으로는 public network 주소 밖에 없다.   
+[aaa@seoul chat-bot]$ cat /etc/hosts|grep mongodb
+10.146.0.3 mongodb1
+
+
+[aaa@seoul chat-bot]$ cat test.sh
 mongo -u test -p test --host mongodb1:27017 --authenticationDatabase simple-bot
+                             ㄴ 서버IPL포트
 ~~~

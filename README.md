@@ -74,6 +74,28 @@ mongo -u test -p test --host mongodb1:27017 --authenticationDatabase simple-bot
                              ㄴ 서버IP:포트
 ~~~
 
+~~~
+[torrentchecker_com@busan mongodb-connection-test]$ cat test.sh
+mongo --authenticationMechanism SCRAM -u test -p test --host mongodb1:27017 --authenticationDatabase test
+[torrentchecker_com@busan mongodb-connection-test]$ ./test.sh
+MongoDB shell version v4.0.4
+connecting to: mongodb://mongodb1:27017/
+Implicit session: session { "id" : UUID("43b06955-2f0a-4656-aba6-e93c4e233385") }
+MongoDB server version: 4.0.4
+Welcome to the MongoDB shell.
+For interactive help, type "help".
+For more comprehensive documentation, see
+        http://docs.mongodb.org/
+Questions? Try the support group
+        http://groups.google.com/group/mongodb-user
+> 
+> 
+> show dbs
+test  0.000GB
+> exit
+bye
+~~~
+
 
 ## Python3 설치  
 (http://snowdeer.github.io/python/2018/02/20/install-python3-on-centos/)    

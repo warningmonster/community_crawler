@@ -71,13 +71,13 @@ $ sudo ln -s /bin/python3.6 /bin/python <--- yum이 망가트림
                                              #!/usr/bin/python → #!/usr/bin/python2.7 (2018.12.10 메모)
                                              ㄴ 이렇게 하다가 설치시에 에러남.
                                                 그냥 2.x대로 원복하고 나중에 3.x와 연결하는게 낫겠네...(2018.12.10 메모)
-                                                # 원복 (python이라는 이름을 2.7 즉 구버전과 다시 연결)
+                                                ** 원복 (python이라는 이름을 2.7 즉 구버전과 다시 연결)
                                                 - sudo unlink /bin/python
                                                 - sudo ln -s /bin/python2.7 /bin/python
-                                                # 설치 다했으면 다시 python이라는 이름을 3.x python과 연결
+                                                ** 설치 다했으면 다시 python이라는 이름을 3.x python과 연결
                                                 - sudo unlink /bin/python
                                                 - sudo ln -s /bin/python2.7 /bin/python
-                                                # 졸라 귀찮음...(2018.12.10 메모)
+                                                ** 졸라 귀찮음...(2018.12.10 메모)
                                                 
 $ sudo ln -s /bin/pip3.6 /bin/pip 
 ~~~

@@ -60,13 +60,25 @@ $ which python3.6 /usr/bin/python3.6
 $ ls -l /bin/python*
 ~~~
 
-Alias 수정을 합니다.   
+Alias 수정을 합니다.
+# 아래 명령어는 설치할 거 다 하고 합시다.
+# yum에서 사용하는 python 문법이 모두 2.x로 되어 있어 아래 3.6으로 변경하고 나서 yum 설치시 에러남. 
 ~~~
 $ sudo unlink /bin/python
 $ sudo ln -s /bin/python3.6 /bin/python3
 $ sudo ln -s /bin/python3.6 /bin/python <--- yum이 망가트림
                                              sudo vi /usr/bin/yum 으로 해서 맨 윗줄의 python을 python2.7같이 버전 명시해서 수정 필요
                                              #!/usr/bin/python → #!/usr/bin/python2.7 (2018.12.10 메모)
+                                             ㄴ 이렇게 하다가 설치시에 에러남.
+                                                그냥 2.x대로 원복하고 나중에 3.x와 연결하는게 낫겠네...(2018.12.10 메모)
+                                                # 원복 (python이라는 이름을 2.7 즉 구버전과 다시 연결)
+                                                - sudo unlink /bin/python
+                                                - sudo ln -s /bin/python2.7 /bin/python
+                                                # 설치 다했으면 다시 python이라는 이름을 3.x python과 연결
+                                                - sudo unlink /bin/python
+                                                - sudo ln -s /bin/python2.7 /bin/python
+                                                # 졸라 귀찮음...(2018.12.10 메모)
+                                                
 $ sudo ln -s /bin/pip3.6 /bin/pip 
 ~~~
 

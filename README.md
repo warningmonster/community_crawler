@@ -64,7 +64,7 @@ Alias 수정을 합니다.
 ~~~
 $ sudo unlink /bin/python
 $ sudo ln -s /bin/python3.6 /bin/python3
-$ sudo ln -s /bin/python3.6 /bin/python <--- yum이 망가짐....
+$ sudo ln -s /bin/python3.6 /bin/python <--- yum이 망가트림
                                              sudo vi /usr/bin/yum 으로 해서 맨 윗줄의 python을 python2.7같이 버전 명시해서 수정 필요
                                              #!/usr/bin/python → #!/usr/bin/python2.7 (2018.12.10 메모)
 $ sudo ln -s /bin/pip3.6 /bin/pip 

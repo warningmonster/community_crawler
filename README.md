@@ -110,5 +110,8 @@ ex) git clone https://github.com/warningmonster/community_crawler.git
 ~~~
 
 
-## License
-MIT (http://www.opensource.org/licenses/mit-license.php)
+
+## 원격의 mongodb 접속하기
+[mmmm@seoul chat-bot]$ cat test.sh
+mongo -u test -p test --host mongodb1:27017 --authenticationDatabase simple-bot
+

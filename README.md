@@ -167,7 +167,7 @@ $ sudo ln -s /bin/python3.6 /bin/python
          - sudo ln -s /bin/python2.7 /bin/python
          ** 설치 다했으면 다시 python이라는 이름을 3.x python과 연결
          - sudo unlink /bin/python
-         - sudo ln -s /bin/python2.7 /bin/python
+         - sudo ln -s /bin/python3.6 /bin/python 
          ** 졸라 귀찮음...(2018.12.10 메모)
                                                 
 $ sudo ln -s /bin/pip3.6 /bin/pip 

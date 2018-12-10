@@ -70,10 +70,11 @@ $ sudo ln -s /bin/pip3.6 /bin/pip
 
 ## 소스 복제
 git clone github 주소
-ex) git clone 
+ex) git clone https://github.com/warningmonster/community_crawler.git
 
 ## 설치
 ~~~
+- cd ./commutiy_crawler
 - ln -s $(pwd)/pre-commit $(pwd)/.git/hooks/
 - cp env.dist.dev .env
 - python3 -m venv venv

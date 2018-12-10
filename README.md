@@ -16,6 +16,8 @@
 - python 3.x
 - [Mongodb](https://www.mongodb.org)
 
+## git 설치
+- sudo yum install git
 
 ## Python3 설치  
 (http://snowdeer.github.io/python/2018/02/20/install-python3-on-centos/)    
@@ -65,6 +67,10 @@ $ sudo ln -s /bin/python3.6 /bin/python3
 $ sudo ln -s /bin/python3.6 /bin/python
 $ sudo ln -s /bin/pip3.6 /bin/pip
 ~~~
+
+## 소스 복제
+git clone github 주소
+ex) git clone 
 
 ## 설치
 ~~~

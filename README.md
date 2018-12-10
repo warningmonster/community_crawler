@@ -73,6 +73,10 @@ $ sudo ln -s /bin/pip3.6 /bin/pip
 - python3 -m venv venv
 - source venv/bin/activate . <---- 모듈 실행할때마다 다시 해줘야 함.(2018.11.25 메모) 
 - pip install -r requirement.txt
+  ㄴ 옛날 버전이라고 pip 업그레이드하라고 메시지 나옴(2018.12.10 메모)
+      You are using pip version 9.0.3, however version 18.1 is available.
+      You should consider upgrading via the 'pip install --upgrade pip' command.
+- pip install --upgrade pip
 ~~~
 
 ## 실행명령어

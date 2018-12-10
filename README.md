@@ -23,7 +23,12 @@
 - sudo yum install mongodb <-- 이렇게 하면 낮은 버전(2.6.12)의 mongodb shell이 설치되어 원격 접속이 안된다.  
                                 SCRAM mechanism support not compiled into client library 이런 에러 난다.  
                                 버전이 낮아서 발생한 문제로 버전을 올려줘야 함.   
-- 설치 방법은 아래에 있음.   
+-- 혹시 설치했으면 아래 방법으로 mongodb 구 버전 삭제
+~~~
+- sudo yum remove mongodb
+~~~
+
+- mongodb 설치 방법은 아래  있음.   
   centos에 설치하는 방법   
   https://docs.mongodb.com/manual/tutorial/install-mongodb-on-red-hat/   
 ~~~

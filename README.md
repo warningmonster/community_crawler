@@ -86,7 +86,7 @@ $ sudo ln -s /bin/pip3.6 /bin/pip
 ~~~
 
 ## 소스 복제
-git clone github 주소
+git clone github 주소   
 ex) git clone https://github.com/warningmonster/community_crawler.git
 
 ## 설치

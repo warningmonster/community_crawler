@@ -39,8 +39,34 @@ enabled=1
 gpgkey=https://www.mongodb.org/static/pgp/server-4.0.asc
 
 ## mongodb 설치
-sudo yum install -y mongodb-org
-sudo yum install -y mongodb-org-4.0.4 mongodb-org-server-4.0.4 mongodb-org-shell-4.0.4 mongodb-org-mongos-4.0.4 mongodb-org-tools-4.0.4
+- sudo yum install -y mongodb-org
+- sudo yum install -y mongodb-org-4.0.4 mongodb-org-server-4.0.4 mongodb-org-shell-4.0.4 mongodb-org-mongos-4.0.4 mongodb-org-tools-4.0.4
+
+## 설치 다했으면 버전 확인해보자
+[aaa@busan mongodb-connection-test]$ mongo --version
+MongoDB shell version v4.0.4    <--- 버전이 올라간 것을 확인할 수 있음.
+git version: f288a3bdf201007f3693c58e140056adf8b04839
+OpenSSL version: OpenSSL 1.0.1e-fips 11 Feb 2013
+allocator: tcmalloc
+modules: none
+build environment:
+    distmod: rhel70
+    distarch: x86_64
+    target_arch: x86_64
+~~~
+
+## 원격의 mongodb 접속하기
+~~~
+# 먼저 /etc/hosts 파일에 mongodb라고 등록해놓았다.  
+# public network이 아니라 private network 주소이다.
+# 이건(private network) 구글클라우드를 사용해서 있는거고, 일반적으로는 public network 주소 밖에 없다.   
+[aaa@seoul chat-bot]$ cat /etc/hosts|grep mongodb
+10.146.0.3 mongodb1
+
+
+[aaa@seoul chat-bot]$ cat test.sh
+mongo -u test -p test --host mongodb1:27017 --authenticationDatabase simple-bot
+                             ㄴ 서버IP:포트
 ~~~
 
 
@@ -136,16 +162,4 @@ ex) git clone https://github.com/warningmonster/community_crawler.git
 
 
 
-## 원격의 mongodb 접속하기
-~~~
-# 먼저 /etc/hosts 파일에 mongodb라고 등록해놓았다.  
-# public network이 아니라 private network 주소이다.
-# 이건(private network) 구글클라우드를 사용해서 있는거고, 일반적으로는 public network 주소 밖에 없다.   
-[aaa@seoul chat-bot]$ cat /etc/hosts|grep mongodb
-10.146.0.3 mongodb1
 
-
-[aaa@seoul chat-bot]$ cat test.sh
-mongo -u test -p test --host mongodb1:27017 --authenticationDatabase simple-bot
-                             ㄴ 서버IP:포트
-~~~

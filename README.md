@@ -61,8 +61,8 @@ $ ls -l /bin/python*
 ~~~
 
 Alias 수정을 합니다.
-# 아래 명령어는 설치할 거 다 하고 합시다.
-# yum에서 사용하는 python 문법이 모두 2.x로 되어 있어 아래 3.6으로 변경하고 나서 yum 설치시 에러남. 
+** 아래 명령어는 설치할 거 다 하고 합시다.
+** yum에서 사용하는 python 문법이 모두 2.x로 되어 있어 아래 3.6으로 변경하고 나서 yum 설치시 에러남. 
 ~~~
 $ sudo unlink /bin/python
 $ sudo ln -s /bin/python3.6 /bin/python3

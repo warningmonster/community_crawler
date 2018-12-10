@@ -19,6 +19,31 @@
 ## git 설치
 - sudo yum install git
 
+## mongodb 설치  
+- sudo yum install mongodb <-- 이렇게 하면 낮은 버전(2.6.12)의 mongodb shell이 설치되어 원격 접속이 안된다.
+                                SCRAM mechanism support not compiled into client library 이런 에러 난다.
+                                버전이 낮아서 발생한 문제로 버전을 올려줘야 함.
+- 설치 방법은 아래에 있음.
+  centos에 설치하는 방법
+  https://docs.mongodb.com/manual/tutorial/install-mongodb-on-red-hat/
+~~~
+## repo 파일 생성
+- sudo vi /etc/yum.repos.d/mongodb-org-4.0.repo
+
+아래 내용 입력 후 저장
+[mongodb-org-4.0]
+name=MongoDB Repository
+baseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/4.0/x86_64/
+gpgcheck=1
+enabled=1
+gpgkey=https://www.mongodb.org/static/pgp/server-4.0.asc
+
+## mongodb 설치
+sudo yum install -y mongodb-org
+sudo yum install -y mongodb-org-4.0.4 mongodb-org-server-4.0.4 mongodb-org-shell-4.0.4 mongodb-org-mongos-4.0.4 mongodb-org-tools-4.0.4
+~~~
+
+
 ## Python3 설치  
 (http://snowdeer.github.io/python/2018/02/20/install-python3-on-centos/)    
 

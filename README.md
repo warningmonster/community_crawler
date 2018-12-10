@@ -75,9 +75,9 @@ mongo -u test -p test --host mongodb1:27017 --authenticationDatabase simple-bot
 ~~~
 
 ~~~
-[torrentchecker_com@busan mongodb-connection-test]$ cat test.sh
+[aaa@busan mongodb-connection-test]$ cat test.sh
 mongo --authenticationMechanism SCRAM -u test -p test --host mongodb1:27017 --authenticationDatabase test
-[torrentchecker_com@busan mongodb-connection-test]$ ./test.sh
+[aaa@busan mongodb-connection-test]$ ./test.sh
 MongoDB shell version v4.0.4
 connecting to: mongodb://mongodb1:27017/
 Implicit session: session { "id" : UUID("43b06955-2f0a-4656-aba6-e93c4e233385") }

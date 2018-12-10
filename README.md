@@ -96,6 +96,16 @@ test  0.000GB
 bye
 ~~~
 
+## mongodb 환경은 여기 환경 파일에 셋팅됨
+~~~
+[aaa@busan community_crawler]$ cat env.dist.dev
+TYPE=dev
+DATABASE_URL=mongodb://localhost:27017/   <--- 이거 본인의 mongodb 주소로 수정하라구..
+DEBUG=1
+CRAWLER_INTERVAL_SEC=3
+CRAWLER_INTERVAL_MINUTES_MIN=3
+CRAWLER_INTERVAL_MINUTES_MAX=3
+~~~
 
 ## Python3 설치  
 (http://snowdeer.github.io/python/2018/02/20/install-python3-on-centos/)    
